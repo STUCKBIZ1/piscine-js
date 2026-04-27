@@ -13,5 +13,5 @@ function dogYears(planet, seconds) {
         neptune: 164.79132
     };
 
-    return Number((earthYears / orbital[planet] * 7).toFixed(2));
+    return earthYears / orbital[planet] * 7;
 }
