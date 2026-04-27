@@ -38,7 +38,7 @@ is.fun = function(value) {
 };
 
 is.truthy = function(value) {
-  return Boolean(value);
+  return value;
 };
 
 is.falsy = function(value) {
