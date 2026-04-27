@@ -1,11 +1,11 @@
 
 function more(a){
     a = parseInt(a)
-    return a+1
+    return a++
 }
 function less(a){
     a = parseInt(a)
-    return a-1
+    return a--
 }
 function add(a, b){
     a = parseInt(a)
