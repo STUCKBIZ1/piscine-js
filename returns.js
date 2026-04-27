@@ -1,5 +1,5 @@
 function id(x){
-    return id
+    return x
 }
 function getLength(x){
     return x.length
