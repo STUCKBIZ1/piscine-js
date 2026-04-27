@@ -1,6 +1,6 @@
 const is = {}
 is.num = function(value) {
-  return typeof value === "number" && !Number.isNaN(value);
+  return typeof value === "number";
 };
 
 is.nan = function(value) {
@@ -28,7 +28,7 @@ is.arr = function(value) {
 };
 
 is.obj = function(value) {
-  return typeof value === "object" && !Array.isArray(value);
+  return typeof value === "object";
 };
 
 is.fun = function(value) {
