@@ -1,2 +1,2 @@
-let smalls = 9007199254740992;
-let biggie = -9007199254740991;
+let smalls = Number.MAX_SAFE_INTEGER
+let biggie = Number.MIN_SAFE_INTEGER;
