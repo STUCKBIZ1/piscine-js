@@ -6,8 +6,6 @@ const person = {
 const clone1 = {...person}
 const clone2 = {...person}
 const samePerson = person
-samePerson = {
-    age : age+1,
-    country : 'FR',
-}
+person.age  += 1;
+person.country = 'FR';
 
