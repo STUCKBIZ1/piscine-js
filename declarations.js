@@ -2,7 +2,7 @@ const escapeStr = "` \\ / \" '";
 const arr = [4, '2'];
 const obj = {
     str : "hello",
-    obj : 0,
+    num : 0,
     bool : true,
     undef: undefined,
 }
@@ -17,4 +17,5 @@ const nested = {
 Object.freeze(arr)
 Object.freeze(obj)
 Object.freeze(nested)
+
 
