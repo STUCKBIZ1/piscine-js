@@ -1,47 +1,44 @@
-const is = {
+const is = {}
+is.num = function(value) {
+  return typeof value === "number" && !Number.isNaN(value);
+};
 
-  num: function(value) {
-    return typeof value === "number" && !Number.isNaN(value);
-  },
+is.nan = function(value) {
+  return Number.isNaN(value);
+};
 
-  nan: function(value) {
-    return Number.isNaN(value);
-  },
+is.str = function(value) {
+  return typeof value === "string";
+};
 
-  str: function(value) {
-    return typeof value === "string";
-  },
+is.bool = function(value) {
+  return typeof value === "boolean";
+};
 
-  bool: function(value) {
-    return typeof value === "boolean";
-  },
+is.undef = function(value) {
+  return value === undefined;
+};
 
-  undef: function(value) {
-    return typeof value === "undefined";
-  },
+is.def = function(value) {
+  return value !== undefined;
+};
 
-  def: function(value) {
-    return value !== undefined;
-  },
+is.arr = function(value) {
+  return Array.isArray(value);
+};
 
-  arr: function(value) {
-    return Array.isArray(value);
-  },
+is.obj = function(value) {
+  return typeof value === "object" && !Array.isArray(value);
+};
 
-  obj: function(value) {
-    return typeof value === "object" && value !== null && !Array.isArray(value);
-  },
+is.fun = function(value) {
+  return typeof value === "function";
+};
 
-  fun: function(value) {
-    return typeof value === "function";
-  },
+is.truthy = function(value) {
+  return Boolean(value);
+};
 
-  truthy: function(value) {
-    return Boolean(value);
-  },
-
-  falsy: function(value) {
-    return !value;
-  }
-
+is.falsy = function(value) {
+  return !value;
 };
