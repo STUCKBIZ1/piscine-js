@@ -27,3 +27,62 @@ function round(n){
         }
     }
 }
+function ceil(n){
+    let int = 0;
+    let x = n;
+    if (n >= 0){
+        while(x >= 1){
+            int++
+            x--
+        }
+    }else{
+        while(x <= -1){
+            int--
+            x++
+        }
+    }
+    let diff = n - int
+    if (diff == 0){
+        return n
+    }
+    return int + 1
+}
+function floor(n){
+    let int = 0;
+    let x = n;
+    if (n >= 0){
+        while(x >= 1){
+            int++
+            x--
+        }
+    }else{
+        while(x <= -1){
+            int--
+            x++
+        }
+    }
+    let diff = n - int
+    if (diff == 0){
+        return int
+    }
+    if (n < 0){
+        return int-1
+    }
+    return int
+}
+function trunc(n){
+    let int = 0;
+    let x = n;
+    if (n >= 0){
+        while(x >= 1){
+            int++
+            x--
+        }
+    }else{
+        while(x <= -1){
+            int--
+            x++
+        }
+    }
+    return int
+}
