@@ -9,6 +9,9 @@ function split(str, sep){
           minres += str[i]  
         }
     }
+    if (minres != ""){
+        arr.push(minres)
+    }
     return arr
 }
 function join(arr, sep){
@@ -21,6 +24,6 @@ function join(arr, sep){
     }
     return result
 }
-// let arr = split('   abde hasssnaoui kd', ' ')
+// let arr = split('a b c', ' ')
 // console.log(arr)
 // console.log(join(arr, ' '))
