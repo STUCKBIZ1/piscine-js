@@ -1,11 +1,15 @@
 function trunc(n) {
-    let int = 0
-    let x = Math.abs(n)
-    while (x >= 1000) { x -= 1000; int += 1000; }
-    while (x >= 100)  { x -= 100;  int += 100;  }
-    while (x >= 10)   { x -= 10;   int += 10;   }
-    while (x >= 1)    { x -= 1;    int += 1;    }
-    return (n < 0) ? -int : int
+  if (n<0){
+    return -trunc(-n)
+  }
+  if (n<1){
+    return 0
+  }
+  let power=1
+  while(power*2<=n){
+    power*=2
+  }
+  return power+trunc(n-power)
 }
 
 function round(n) {
