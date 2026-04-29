@@ -46,7 +46,7 @@ function floor(n){
             x++
         }
     }
-    return (x === 0)? int : int -1
+    return (x === 0 || n > 0) ? int : int - 1;
 }
 function trunc(n){
     let int = 0;
