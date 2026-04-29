@@ -12,7 +12,7 @@ function round(n){
             x++
             int--
         }
-        return (Math.abs(x) >= -0.5)? int-1 : int
+        return (x <= -0.5)? int-1 : int
     }
 }
 function ceil(n){
