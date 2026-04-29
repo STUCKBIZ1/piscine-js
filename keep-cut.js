@@ -1,9 +1,9 @@
 function cutFirst(str){
     let result = "";
     let firstchar = 2;
-    if (str.length < 2){
-        return str
-    }
+//     if (str.length < 2){
+//         return str
+//     }
     for (let i = firstchar; i < str.length; i++){
             result += str[i]
     }
@@ -12,9 +12,9 @@ function cutFirst(str){
 function cutLast(str){
     let result = "";
     let laststchar = str.length-2;
-    if (str.length < 2){
-        return str
-    }
+//     if (str.length < 2){
+//         return str
+//     }
     for (let i = 0; i < laststchar; i++){
             result += str[i]
     }
@@ -22,9 +22,9 @@ function cutLast(str){
 }
 function cutFirstLast(str){
     let result = "";
-    if (str.length < 4){
-        return str
-    }
+//     if (str.length < 4){
+//         return str
+//     }
     let firstchar = 2;
     let laststchar = str.length-2;
     for (let i = firstchar; i < laststchar; i++){
@@ -69,3 +69,4 @@ function keepFirstLast(str){
     }
     return result
 }
+// console.log(cutFirstLast('aaaaa'))
