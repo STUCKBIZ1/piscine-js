@@ -1,5 +1,5 @@
 function trunc(n) {
-    return ~~n;
+    return n ^ 0;
 }
 
 function round(n) {
