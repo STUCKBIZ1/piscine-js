@@ -23,7 +23,10 @@ function divide(a, b){
        a -= b;
        count++ 
     }
-    return count * sign
+    if (sign === -1 && a > 0 || sign === 1 && a < 0){
+        return -a
+    }
+    return +a
 }
 function modulo(a, b){
     let sign = 1;
@@ -40,6 +43,8 @@ function modulo(a, b){
        a -= b;
        count++ 
     }
-    return a * sign
+    if (sign === -1 && a > 0 || sign === 1 && a < 0){
+        return -a
+    }
+    return +a
 }
-// console.log(modulo(2, -7))
