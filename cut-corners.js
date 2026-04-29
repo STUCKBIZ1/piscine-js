@@ -1,5 +1,5 @@
 function trunc(n) {
-    return n >= 0 ? Math.floor(n) : Math.ceil(n);
+    return Math.sign(n) * Math.abs(n - 0.5 + Math.sign(n) * 0.5);
 }
 
 function round(n) {
