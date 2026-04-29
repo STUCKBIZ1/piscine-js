@@ -14,3 +14,4 @@ function slice(ars, start = 0, end = ars.length){
 
     return res;
 }
+console.log(slice("sdflksfs", 0, 2))
