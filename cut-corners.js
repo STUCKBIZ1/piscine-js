@@ -1,7 +1,7 @@
 function round(n){
     let int = 0;
     let x = n
-    if (n > 0){
+    if (n >= 0){
         while (x >= 1){
         x--
         int++
@@ -36,7 +36,7 @@ function ceil(n){
             x--
         }
     }else{
-        while(x <= 0){
+        while(x < 0){
             int--
             x++
         }
