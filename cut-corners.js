@@ -36,7 +36,7 @@ function ceil(n){
             x--
         }
     }else{
-        while(x <= -1){
+        while(x <= 0){
             int--
             x++
         }
@@ -86,3 +86,8 @@ function trunc(n){
     }
     return int
 }
+// const nums = [3.7, -3.7, 3.1, -3.1]
+// console.log(nums.map(round))
+// console.log(nums.map(floor))
+// console.log(nums.map(trunc))
+// console.log(nums.map(ceil))
