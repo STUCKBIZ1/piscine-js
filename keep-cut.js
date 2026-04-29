@@ -69,4 +69,3 @@ function keepFirstLast(str){
     }
     return result
 }
-console.log(keepFirstLast("asaad"))
