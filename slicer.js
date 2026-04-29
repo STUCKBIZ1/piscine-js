@@ -10,7 +10,7 @@ function slice(ars, start, end = ars.length){
     if (end > ars.length-1){
         end = ars.length-1
     }
-    for (let i = start; i <= end; i++){
+    for (let i = start; i < end; i++){
         if(typeof ars === 'string'){
             ress += ars[i]
         }else{
@@ -22,4 +22,4 @@ function slice(ars, start, end = ars.length){
     }
     return result
 }
-// console.log(slice('abcdef', 2, 3))
+console.log(slice('abcdef', 2))
