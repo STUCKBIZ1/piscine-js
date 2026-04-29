@@ -1,4 +1,4 @@
-function slice(ars, start, end){
+function slice(ars, start, end = ars.length){
     let resr = [];
     let ress = "";
     if (start < 0){
@@ -22,4 +22,4 @@ function slice(ars, start, end){
     }
     return result
 }
-// console.log(slice("dklkjsdghkjf", -5, 11))
+// console.log(slice('abcdef', 2, 3))
