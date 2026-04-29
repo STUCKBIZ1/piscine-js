@@ -42,4 +42,4 @@ function modulo(a, b){
     }
     return a * sign
 }
-console.log(modulo(2, -7))
+// console.log(modulo(2, -7))
