@@ -1,6 +1,7 @@
 function split(str, sep){
     let arr = [];
     let minres = "";
+    if (sep === "") return [str];
     for (let i = 0; i < str.length; i++){
         if (slice(str, i, i+sep.length) === sep){
             arr.push(minres)
