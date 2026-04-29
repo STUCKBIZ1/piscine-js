@@ -1,13 +1,5 @@
 function trunc(n) {
-    if (n >= 0) {
-        let int = 0, x = n;
-        while (x >= 1) { int++; x -= 1; }
-        return int;
-    } else {
-        let int = 0, x = n;
-        while (x <= -1) { int--; x += 1; }
-        return int;
-    }
+    return n | 0;
 }
 
 function round(n) {
