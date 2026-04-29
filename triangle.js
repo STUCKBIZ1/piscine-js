@@ -6,6 +6,6 @@ function triangle(str, n){
         }
         result += "\n"
     }
-    return result
+    return result + "\n"
 }
 // console.log(triangle("*", 78))
