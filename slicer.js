@@ -1,4 +1,4 @@
-function slice(ars, start, end = ars.length-1){
+function slice(ars, start, end = ars.length){
     let resr = [];
     let ress = "";
     if (start < 0){
@@ -10,7 +10,7 @@ function slice(ars, start, end = ars.length-1){
     if (end > ars.length-1){
         end = ars.length-1
     }
-    for (let i = start; i <= end; i++){
+    for (let i = start; i < end; i++){
         if(typeof ars === 'string'){
             ress += ars[i]
         }else{
@@ -22,4 +22,4 @@ function slice(ars, start, end = ars.length-1){
     }
     return result
 }
-// console.log(slice('abcdef', 2))
+// console.log(slice('abcdef', 0, 2))
