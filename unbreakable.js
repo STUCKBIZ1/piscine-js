@@ -1,7 +1,12 @@
 function split(str, sep){
     let arr = [];
     let minres = "";
-    if (sep === "") return [str];
+    if (sep === "") {
+        for (let i = 0; i < str.length; i++){
+            arr.push(str[i])
+        }
+        return arr
+    }
     for (let i = 0; i < str.length; i++){
         if (slice(str, i, i+sep.length) === sep){
             arr.push(minres)
@@ -24,9 +29,9 @@ function join(arr, sep){
     }
     return result
 }
-// let arr = split('ggg ddd b', ' ')
+// let arr = split('ggg ddd b  ', '')
 // console.log(arr)
-// console.log(join(arr, ' '))
+// console.log(join(arr, ''))
 function slice(ars, start = 0, end = ars.length){
     let res = typeof ars === 'string' ? "" : [];
 
