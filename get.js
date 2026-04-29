@@ -1,6 +1,7 @@
 function get(obj, path){
     let p = typeof path === 'string'? path.split('.') : path
     let [first, ...rest] = p
+    if (obj === undefined)return undefined;
     if (p.length===0){
         return obj
     }
@@ -9,6 +10,6 @@ function get(obj, path){
     }
     return get(obj?.[first], rest)
 }
-// const src = { nested: { key: 'peekaboo' } }
-// const path = 'nesteskdaa'
-// console.log(get(src, path)) // -> 'peekaboo'
+const src = { nested: { key: 'value' } }
+const path = 'neste.skdaa'
+console.log(get(src, path)) // -> 'peekaboo'
