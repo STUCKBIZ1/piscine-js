@@ -1,7 +1,7 @@
 function cutFirst(str){
     let result = "";
     let firstchar = 2;
-    f (str.length < 2){
+    if (str.length < 2){
         return str
     }
     for (let i = firstchar; i < str.length; i++){
