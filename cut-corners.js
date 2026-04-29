@@ -6,13 +6,13 @@ function round(n){
         x--
         int++
       }
-      return (x >= -0.5)? int: int + 1
+      return (x >= -0.5)? int+1: int
     }else{
         while(x <= -1){
             x++
             int--
         }
-        return (x <= -0.5)? int : int-1
+        return (Math.abs(x) >= -0.5)? int-1 : int
     }
 }
 function ceil(n){
