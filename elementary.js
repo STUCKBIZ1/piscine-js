@@ -11,6 +11,7 @@ function multiply(a, b){
 function divide(a, b){
     let sign = 1;
     let count = 0;
+
     if (a < 0){
         a = -a
         sign = -sign
@@ -19,14 +20,17 @@ function divide(a, b){
         b = -b
         sign = -sign
     }
+
+    if (a < b) return 0
+
     while (a >= b){
        a -= b;
        count++ 
     }
-    if (sign === -1 && a > 0 || sign === 1 && a < 0){
-        return -a
+    if (sign === -1 && a > 0 || sign === 1 && a < 0 || sign === -1 && b > 0 || sign === 1 && b < 0){
+        return -count
     }
-    return +a
+    return +count
 }
 function modulo(a, b){
     let sign = 1;
@@ -43,8 +47,9 @@ function modulo(a, b){
        a -= b;
        count++ 
     }
-    if (sign === -1 && a > 0 || sign === 1 && a < 0){
+    if (sign === -1 && a > 0 || sign === 1 && a < 0 || sign === -1 && b > 0 || sign === 1 && b < 0){
         return -a
     }
     return +a
 }
+console.log(divide(-10, 2))
