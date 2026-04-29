@@ -1,5 +1,5 @@
 function trunc(n) {
-    return parseInt(n);
+    return ~~n;
 }
 
 function round(n) {
