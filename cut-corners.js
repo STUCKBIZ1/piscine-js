@@ -1,71 +1,30 @@
-function round(n) {
-    let int = 0;
-    let x = n;
+function trunc(n) {
     if (n >= 0) {
-        while (x >= 1) {
-            x--;
-            int++;
-        }
-        return (x >= 0.5) ? int + 1 : int;  // ✅ was -0.5
+        let int = 0, x = n;
+        while (x >= 1) { int++; x -= 1; }
+        return int;
     } else {
-        while (x <= -1) {
-            x++;
-            int--;
-        }
-        return (x <= -0.5) ? int - 1 : int;
+        let int = 0, x = n;
+        while (x <= -1) { int--; x += 1; }
+        return int;
     }
 }
-function ceil(n){
-    let int = 0;
-    let x = n;
-    if (n >= 0){
-        while(x >= 1){
-            int++
-            x--
-        }
-        return (n === 0)? int : int+1
-    }else{
-        while(x <= -1){
-            int--
-            x++
-        }
-        return int
-    }
+
+function round(n) {
+    const t = trunc(n);
+    const x = n - t;
+    if (n >= 0) return x >= 0.5 ? t + 1 : t;
+    else        return x <= -0.5 ? t - 1 : t;
 }
-function floor(n){
-    let int = 0;
-    let x = n;
-    if (n >= 0){
-        while(x >= 1){
-            int++
-            x--
-        }
-    }else{
-        while(x <= -1){
-            int--
-            x++
-        }
-    }
-    return (x === 0 || n > 0) ? int : int - 1;
+
+function floor(n) {
+    const t = trunc(n);
+    const x = n - t;
+    return (x < 0) ? t - 1 : t;
 }
-function trunc(n){
-    let int = 0;
-    let x = n;
-    if (n >= 0){
-        while(x >= 1){
-            int++
-            x--
-        }
-    }else{
-        while(x <= -1){
-            int--
-            x++
-        }
-    }
-    return int
+
+function ceil(n) {
+    const t = trunc(n);
+    const x = n - t;
+    return (x > 0) ? t + 1 : t;
 }
-// const nums = [3, -3, 3, -3, 0]
-// console.log(nums.map(round))
-// console.log(nums.map(floor))
-// console.log(nums.map(trunc))
-// console.log(nums.map(ceil))
