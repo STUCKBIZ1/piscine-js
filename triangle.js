@@ -4,8 +4,10 @@ function triangle(str, n){
         for (let j = 1; j <= i ; j++){
             result += str
         }
-        result += "\n"
+        if (i != n){
+            result += "\n"
+        }
     }
-    return result + "\n"
+    return result
 }
-// console.log(triangle("*", 78))
+// console.log(triangle("#", -4))
