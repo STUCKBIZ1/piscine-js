@@ -7,8 +7,8 @@ function get(obj, path){
     if (rest.length === 0){
         return obj[first]
     }
-    return get(obj[first], rest)
+    return get(obj?.[first], rest)
 }
 // const src = { nested: { key: 'peekaboo' } }
-// const path = 'nested.key'
-// console.log(get(src, path))
+// const path = 'nesteskdaa'
+// console.log(get(src, path)) // -> 'peekaboo'
