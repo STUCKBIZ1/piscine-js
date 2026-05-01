@@ -1,4 +1,5 @@
 function vowelDots(str){
-    return str.replace(/[aeiouAEIOU]/g, '$&.')
+    let vowels = /[aeiouAEIOU]/g
+    return str.replace(vowels, '$&.')
 }
 console.log(vowelDots("hello"))
