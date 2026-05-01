@@ -10,6 +10,6 @@ function get(obj, path){
     }
     return get(obj?.[first], rest)
 }
-const src = { nested: { key: 'value' } }
-const path = 'neste.skdaa'
-console.log(get(src, path)) // -> 'peekaboo'
+// const src = { nested: { key: 'value' } }
+// const path = 'neste.skdaa'
+// console.log(get(src, path)) // -> 'peekaboo'
