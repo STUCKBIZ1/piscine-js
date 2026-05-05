@@ -6,20 +6,16 @@ let week = [
 const e = new Date("0001-01-01")
 
 function addWeek(date){
-   const diff = date - e
-   let days =Math.floor(diff/(1000 * 60 * 60 * 24))
+   const diff = date.getTime() - e.getTime
+   let days = Math.floor(diff/(1000 * 60 *  60 * 24))
    let day = days%14
 return week[day]
 }
 function timeTravel({ date, hour, minute, second }) {
-    return new Date(
-        date.getFullYear(),
-        date.getMonth(),
-        date.getDate(),
-        hour,
-        minute,
-        second
-    );
+   date.setHours(hour);
+   date.setMinutes(minute);
+   date.setSeconds(second);
+   return date
 }
 // console.log(timeTravel({
 //   date: new Date("2020-05-29 23:25:22"),
