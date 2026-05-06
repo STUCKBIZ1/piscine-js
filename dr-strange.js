@@ -6,7 +6,7 @@ let week = [
 const e = new Date("0001-01-01")
 
 function addWeek(date){
-   const diff = date.getTime() - e.getTime
+   const diff = date.getTime() - e.getTime()
    let days = Math.floor(diff/(1000 * 60 *  60 * 24))
    let day = days%14
 return week[day]
