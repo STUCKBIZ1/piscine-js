@@ -1,9 +1,7 @@
-function adder(arr){
-    return arr.reduce((acc, curr) =>{
-        return acc + curr
-    }, 0)
+function adder(arr, start=0){
+    return arr.reduce((acc, curr) => acc + curr, start)
 }
-function sumOrMul(arr, start){
+function sumOrMul(arr, start=0){
     return arr.reduce((acc, currn) => {
     if (currn %  2== 0){
         return acc * currn
@@ -12,8 +10,9 @@ function sumOrMul(arr, start){
     }
     }, start)
 }
-function funcExec(arr){
+function funcExec(arr, start = 0){
     return arr.reduce((acc, fn)=>{
         return fn(acc)
-    }, 0)
+    }, start)
 }
+console.log(adder([9, 24, 7, 1, 3], 10), 3)
