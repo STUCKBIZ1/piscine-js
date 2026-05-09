@@ -7,12 +7,12 @@ export function pimp(){
     if (action === "add"){
        btn.classList.add(styles[index])
        index++
-       if (index === styles.length-1){
+       if (index === styles.length){
         action = "remove"
        }
        
     }else{
-        btn.classList.remove(styles[index])
+        btn.classList.remove(styles[index-1])
         index--
         if (index === 0){
             action = "add"
