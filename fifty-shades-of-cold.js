@@ -12,24 +12,15 @@ export function generateClasses(){
     document.head.append(style)
 }
 export function generateColdShades(){
-const c = [
-"aqua",
-"blue",
-"turquoise",
-"green",
-"cyan",
-"navy",
-"purple"
-]
-    c.forEach(l => {
-        if (colors.includes(l)){
+const cold = ['aqua', 'blue', 'turquoise', 'green', 'purple', 'cyan', 'navy']
+    colors.sort().forEach(color => {
+        if (cold.some(c => color.includes(c))){
          let div = document.createElement("div")
-         div.textContent = l
-         div.className = l
+         div.textContent = color
+         div.className = color
          document.body.append(div)
         }
     })
-
 }
 export function choseShade(divcontent){
     let divs = document.querySelectorAll('div')
