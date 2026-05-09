@@ -1,7 +1,7 @@
 export function generateLetters(){
     let alphaapper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let total = "120";
-    for (let i = 1; i <= total; i++){
+    for (let i = 0; i < total; i++){
         let div = document.createElement("div")
         div.textContent = alphaapper[Math.floor(Math.random()*alphaapper.length)]
         let fontsize = i+11;
