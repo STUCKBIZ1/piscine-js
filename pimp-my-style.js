@@ -8,10 +8,14 @@ export function pimp(){
        btn.classList.add(styles[index])
        index++
        if (index === styles.length){
+        btn.classList.add("unpimp")
         action = "remove"
        }
        
     }else{
+        if (index === styles.length){
+        btn.classList.add("unpimp")
+       }
         btn.classList.remove(styles[index-1])
         index--
         if (index === 0){
