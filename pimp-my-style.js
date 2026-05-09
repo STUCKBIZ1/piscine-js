@@ -14,7 +14,7 @@ export function pimp(){
        
     }else{
         if (index === styles.length){
-        btn.classList.add("unpimp")
+        btn.classList.remove("unpimp")
        }
         btn.classList.remove(styles[index-1])
         index--
