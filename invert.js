@@ -1,13 +1,9 @@
-function invert(obj){
+function invert(obj) {
     let newobj = {};
-    for (let key in obj){
-        if (typeof key === "object"){
-            // newobj[obj[key]] = invert(key)
-            continue
-        }else{
-             newobj[obj[key]] = key;
-        }
+
+    for (const key of Object.keys(obj)) {
+        newobj[obj[key]] = key;
     }
-    return newobj
+
+    return newobj;
 }
-//  console.log(invert({ f: 5, __proto__: { d: 6 } }))
