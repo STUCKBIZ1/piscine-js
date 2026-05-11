@@ -6,7 +6,7 @@ if (typeof arrstr === 'string'){
 }else{
     keys = arrstr
 }
-for (let i = 1; i < keys.length; i++){
+for (let i = 0; i < keys.length; i++){
     newobject[keys[i]] = obj[keys[i]]
 }
 return newobject
@@ -23,3 +23,4 @@ function omit(obj, arrstr){
     }
     return obj
 }
+// console.log(pick({a : 'a', b : 'k', h : 'y'}, "a b"))
