@@ -24,11 +24,10 @@
 
     return Math.round(total * 10) / 10
     }
-
-  function lowCarbs(cart) {
+function lowCarbs(cart) {
   return filterEntries(cart, ([item, grams]) => {
     const carbsPer100 = nutritionDB[item].carbs
-    const totalCarbs = carbsPer100 * grams / 100
+    const totalCarbs = (carbsPer100 * grams) / 100
     return totalCarbs < 50
   })
 }
