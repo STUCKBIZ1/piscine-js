@@ -1,14 +1,19 @@
 function replica(target, ...sources) {
   for (const source of sources) {
     for (const key in source) {
-      if (source[key] instanceof RegExp) {
-        target[key] = source[key];
-      } else if (Array.isArray(source[key])) {
-        target[key] = replica([], source[key]);
-      } else if (typeof source[key] === 'object' && source[key] !== null) {
-        target[key] = replica({}, source[key]);
+      const value = source[key];
+
+      if (value instanceof RegExp) {
+        target[key] = value;
+
+      } else if (Array.isArray(value)) {
+        target[key] = replica([], value);
+
+      } else if (value && typeof value === 'object') {
+        target[key] = replica(target[key] || {}, value);
+
       } else {
-        target[key] = source[key];
+        target[key] = value;
       }
     }
   }
