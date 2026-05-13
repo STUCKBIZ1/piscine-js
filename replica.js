@@ -10,7 +10,10 @@ function replica(target, ...sources) {
         target[key] = replica([], value);
 
       } else if (value && typeof value === 'object') {
-        target[key] = replica(target[key] || {}, value);
+        if (!target[key] || typeof target[key] !== 'object' || Array.isArray(target[key])) {
+          target[key] = {};
+        }
+        target[key] = replica(target[key], value);
 
       } else {
         target[key] = value;
