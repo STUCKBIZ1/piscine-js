@@ -15,6 +15,5 @@ function opDebounce(func, wait, options = {}) {
       timeout = null;
       if (!options.leading) func.apply(this, args);
     }, wait);
-    if (callNow) func.apply(this, args);
   };
 }
