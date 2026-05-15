@@ -11,13 +11,23 @@ function debounce(func, wait) {
 }
 
 function opDebounce(func, wait, options = {}) {
-  let timeout;
-  return function (...args) {
-    const callNow = options.leading && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      timeout = null;
-      if (!options.leading) func.apply(this, args);
-    }, wait);
-  };
+    let timeout
+
+    return function (...args) {
+        const callNow = options.leading && !timeout
+
+        clearTimeout(timeout)
+
+        timeout = setTimeout(() => {
+            timeout = null
+
+            if (!options.leading) {
+                func.apply(this, args)
+            }
+        }, wait)
+
+        if (callNow) {
+            return func.apply(this, args)
+        }
+    }
 }
