@@ -17,7 +17,6 @@ function opDebounce(func, wait, options = {}) {
         const callNow = options.leading && !timeout
 
         clearTimeout(timeout)
-
         timeout = setTimeout(() => {
             timeout = null
 
@@ -25,7 +24,6 @@ function opDebounce(func, wait, options = {}) {
                 func.apply(this, args)
             }
         }, wait)
-
         if (callNow) {
             return func.apply(this, args)
         }
