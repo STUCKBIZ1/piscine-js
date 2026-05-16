@@ -1,8 +1,6 @@
 function queryServers(serverName, q) {
-  return Promise.race([
-    getJSON(`/${serverName}?q=${q}`),
-    getJSON(`/${serverName}_backup?q=${q}`),
-  ]);
+  return getJSON(`/${serverName}_backup?q=${q}`)
+    .catch(() => getJSON(`/${serverName}?q=${q}`));
 }
 
 async function gougleSearch(q) {
@@ -14,7 +12,11 @@ async function gougleSearch(q) {
     queryServers('web', q),
     queryServers('image', q),
     queryServers('video', q),
-  ]).then(([web, image, video]) => ({ web, image, video }));
+  ]).then(([web, image, video]) => ({
+    web,
+    image,
+    video,
+  }));
 
   return Promise.race([search, timer]);
 }
