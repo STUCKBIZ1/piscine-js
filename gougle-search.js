@@ -1,6 +1,8 @@
 function queryServers(serverName, q) {
-  return getJSON(`/${serverName}_backup?q=${q}`)
-    .catch(() => getJSON(`/${serverName}?q=${q}`));
+  return Promise.any([
+    getJSON(`/${serverName}?q=${q}`),
+    getJSON(`/${serverName}_backup?q=${q}`),
+  ]);
 }
 
 async function gougleSearch(q) {
